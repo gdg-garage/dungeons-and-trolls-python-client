@@ -1,6 +1,8 @@
+SHELL := /bin/bash
+
 publish:
-	bash client-gen.sh
+	./client-gen.sh
 	cd dungeons_and_trolls_generated_client && \
 	pip3 install build twine && \
-	python -m build && \
+	python3 -m build && \
 	twine upload dist/*

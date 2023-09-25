@@ -8,7 +8,7 @@ services:
       -i https://converter.swagger.io/api/convert?url=https://raw.githubusercontent.com/gdg-garage/dungeons-and-trolls/master/api/dungeonsandtrolls.swagger.json
       -g python
       -o /dungeons_and_trolls_generated_client
-      --additional-properties=packageVersion=1.1.0
+      --additional-properties=packageVersion=${VERSION}
       --additional-properties=packageName=dungeons_and_trolls_client
     volumes:
       - "./dungeons_and_trolls_generated_client:/dungeons_and_trolls_generated_client"
