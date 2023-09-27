@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **character** | [**DungeonsandtrollsCharacter**](DungeonsandtrollsCharacter.md) |  | [optional] 
 **current_position** | [**DungeonsandtrollsPosition**](DungeonsandtrollsPosition.md) |  | [optional] 
 **current_level** | **int** |  | [optional] 
-**tick** | **str** |  | [optional] 
+**tick** | **int** |  | [optional] 
 **events** | [**List[DungeonsandtrollsEvent]**](DungeonsandtrollsEvent.md) | List of events which occurred in the previous tick. Useful for visualising effects, debugging and communication. | [optional] 
 **score** | **float** |  | [optional] 
 

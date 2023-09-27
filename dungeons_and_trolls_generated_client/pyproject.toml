@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dungeons_and_trolls_client"
-version = "1.1"
+version = "1.2.0"
 description = "Dungeons and Trolls"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

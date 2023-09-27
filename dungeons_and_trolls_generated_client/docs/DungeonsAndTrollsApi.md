@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **dungeons_and_trolls_assign_skill_points**
-> object dungeons_and_trolls_assign_skill_points(body)
+> object dungeons_and_trolls_assign_skill_points(attributes, blocking=blocking)
 
 Send multiple commands to the Character bound to the logged user. The order of execution is defined in the message.
 
@@ -54,11 +54,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsAttributes() # DungeonsandtrollsAttributes | 
+    attributes = dungeons_and_trolls_client.DungeonsandtrollsAttributes() # DungeonsandtrollsAttributes | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Send multiple commands to the Character bound to the logged user. The order of execution is defined in the message.
-        api_response = api_instance.dungeons_and_trolls_assign_skill_points(body)
+        api_response = api_instance.dungeons_and_trolls_assign_skill_points(attributes, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_assign_skill_points:\n")
         pprint(api_response)
     except Exception as e:
@@ -71,7 +72,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsAttributes**](DungeonsandtrollsAttributes.md)|  | 
+ **attributes** | [**DungeonsandtrollsAttributes**](DungeonsandtrollsAttributes.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -97,7 +99,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_buy**
-> object dungeons_and_trolls_buy(body)
+> object dungeons_and_trolls_buy(identifiers, blocking=blocking)
 
 Buy Items identified by the provided ID for the Character bound to the logged user.
 
@@ -133,11 +135,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsIdentifiers() # DungeonsandtrollsIdentifiers | 
+    identifiers = dungeons_and_trolls_client.DungeonsandtrollsIdentifiers() # DungeonsandtrollsIdentifiers | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Buy Items identified by the provided ID for the Character bound to the logged user.
-        api_response = api_instance.dungeons_and_trolls_buy(body)
+        api_response = api_instance.dungeons_and_trolls_buy(identifiers, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_buy:\n")
         pprint(api_response)
     except Exception as e:
@@ -150,7 +153,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsIdentifiers**](DungeonsandtrollsIdentifiers.md)|  | 
+ **identifiers** | [**DungeonsandtrollsIdentifiers**](DungeonsandtrollsIdentifiers.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -176,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_commands**
-> object dungeons_and_trolls_commands(body)
+> object dungeons_and_trolls_commands(commands_batch, blocking=blocking)
 
 Send multiple commands to the Character bound to the logged user. The order of execution is defined in the message.
 
@@ -212,11 +216,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsCommandsBatch() # DungeonsandtrollsCommandsBatch | 
+    commands_batch = dungeons_and_trolls_client.DungeonsandtrollsCommandsBatch() # DungeonsandtrollsCommandsBatch | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Send multiple commands to the Character bound to the logged user. The order of execution is defined in the message.
-        api_response = api_instance.dungeons_and_trolls_commands(body)
+        api_response = api_instance.dungeons_and_trolls_commands(commands_batch, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_commands:\n")
         pprint(api_response)
     except Exception as e:
@@ -229,7 +234,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsCommandsBatch**](DungeonsandtrollsCommandsBatch.md)|  | 
+ **commands_batch** | [**DungeonsandtrollsCommandsBatch**](DungeonsandtrollsCommandsBatch.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -255,7 +261,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_game**
-> DungeonsandtrollsGameState dungeons_and_trolls_game(ascii=ascii, events=events, blocking=blocking)
+> DungeonsandtrollsGameState dungeons_and_trolls_game(blocking=blocking)
 
 Sends all info about the game.
 
@@ -291,13 +297,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    ascii = True # bool | default false (optional)
-    events = True # bool | default false (optional)
-    blocking = True # bool | default true (optional)
+    blocking = True # bool | default false (optional)
 
     try:
         # Sends all info about the game.
-        api_response = api_instance.dungeons_and_trolls_game(ascii=ascii, events=events, blocking=blocking)
+        api_response = api_instance.dungeons_and_trolls_game(blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_game:\n")
         pprint(api_response)
     except Exception as e:
@@ -310,9 +314,7 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ascii** | **bool**| default false | [optional] 
- **events** | **bool**| default false | [optional] 
- **blocking** | **bool**| default true | [optional] 
+ **blocking** | **bool**| default false | [optional] 
 
 ### Return type
 
@@ -338,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_monsters_commands**
-> object dungeons_and_trolls_monsters_commands(body)
+> object dungeons_and_trolls_monsters_commands(commands_for_monsters, blocking=blocking)
 
 Control monsters. Admin only.
 
@@ -374,11 +376,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsCommandsForMonsters() # DungeonsandtrollsCommandsForMonsters | 
+    commands_for_monsters = dungeons_and_trolls_client.DungeonsandtrollsCommandsForMonsters() # DungeonsandtrollsCommandsForMonsters | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Control monsters. Admin only.
-        api_response = api_instance.dungeons_and_trolls_monsters_commands(body)
+        api_response = api_instance.dungeons_and_trolls_monsters_commands(commands_for_monsters, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_monsters_commands:\n")
         pprint(api_response)
     except Exception as e:
@@ -391,7 +394,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsCommandsForMonsters**](DungeonsandtrollsCommandsForMonsters.md)|  | 
+ **commands_for_monsters** | [**DungeonsandtrollsCommandsForMonsters**](DungeonsandtrollsCommandsForMonsters.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -417,7 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_move**
-> object dungeons_and_trolls_move(body)
+> object dungeons_and_trolls_move(position, blocking=blocking)
 
 Assign skill point to the attribute for the Character bound to the logged user.
 
@@ -453,11 +457,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsPosition() # DungeonsandtrollsPosition | 
+    position = dungeons_and_trolls_client.DungeonsandtrollsPosition() # DungeonsandtrollsPosition | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Assign skill point to the attribute for the Character bound to the logged user.
-        api_response = api_instance.dungeons_and_trolls_move(body)
+        api_response = api_instance.dungeons_and_trolls_move(position, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_move:\n")
         pprint(api_response)
     except Exception as e:
@@ -470,7 +475,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsPosition**](DungeonsandtrollsPosition.md)|  | 
+ **position** | [**DungeonsandtrollsPosition**](DungeonsandtrollsPosition.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -496,7 +502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_pick_up**
-> object dungeons_and_trolls_pick_up(body)
+> object dungeons_and_trolls_pick_up(identifier, blocking=blocking)
 
 Equip the Item from the ground identified by the provided ID for the Character bound to the logged user (unused).
 
@@ -532,11 +538,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsIdentifier() # DungeonsandtrollsIdentifier | 
+    identifier = dungeons_and_trolls_client.DungeonsandtrollsIdentifier() # DungeonsandtrollsIdentifier | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Equip the Item from the ground identified by the provided ID for the Character bound to the logged user (unused).
-        api_response = api_instance.dungeons_and_trolls_pick_up(body)
+        api_response = api_instance.dungeons_and_trolls_pick_up(identifier, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_pick_up:\n")
         pprint(api_response)
     except Exception as e:
@@ -549,7 +556,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsIdentifier**](DungeonsandtrollsIdentifier.md)|  | 
+ **identifier** | [**DungeonsandtrollsIdentifier**](DungeonsandtrollsIdentifier.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -655,7 +663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_respawn**
-> object dungeons_and_trolls_respawn(body)
+> object dungeons_and_trolls_respawn(respawn, blocking=blocking)
 
 Respawn the Character bound to the logged user.
 
@@ -690,11 +698,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = None # object | 
+    respawn = None # object | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Respawn the Character bound to the logged user.
-        api_response = api_instance.dungeons_and_trolls_respawn(body)
+        api_response = api_instance.dungeons_and_trolls_respawn(respawn, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_respawn:\n")
         pprint(api_response)
     except Exception as e:
@@ -707,7 +716,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **object**|  | 
+ **respawn** | **object**|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -733,7 +743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_skill**
-> object dungeons_and_trolls_skill(body)
+> object dungeons_and_trolls_skill(skill_use, blocking=blocking)
 
 Use a skill (provided by an item) by the Character bound to the logged user.
 
@@ -769,11 +779,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsSkillUse() # DungeonsandtrollsSkillUse | 
+    skill_use = dungeons_and_trolls_client.DungeonsandtrollsSkillUse() # DungeonsandtrollsSkillUse | 
+    blocking = True # bool | default true (optional)
 
     try:
         # Use a skill (provided by an item) by the Character bound to the logged user.
-        api_response = api_instance.dungeons_and_trolls_skill(body)
+        api_response = api_instance.dungeons_and_trolls_skill(skill_use, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_skill:\n")
         pprint(api_response)
     except Exception as e:
@@ -786,7 +797,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsSkillUse**](DungeonsandtrollsSkillUse.md)|  | 
+ **skill_use** | [**DungeonsandtrollsSkillUse**](DungeonsandtrollsSkillUse.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
@@ -812,7 +824,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dungeons_and_trolls_yell**
-> object dungeons_and_trolls_yell(body)
+> object dungeons_and_trolls_yell(message, blocking=blocking)
 
 The Character bound to the logged user yells a messages (visible for everyone).
 
@@ -848,11 +860,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dungeons_and_trolls_client.DungeonsAndTrollsApi(api_client)
-    body = dungeons_and_trolls_client.DungeonsandtrollsMessage() # DungeonsandtrollsMessage | 
+    message = dungeons_and_trolls_client.DungeonsandtrollsMessage() # DungeonsandtrollsMessage | 
+    blocking = True # bool | default true (optional)
 
     try:
         # The Character bound to the logged user yells a messages (visible for everyone).
-        api_response = api_instance.dungeons_and_trolls_yell(body)
+        api_response = api_instance.dungeons_and_trolls_yell(message, blocking=blocking)
         print("The response of DungeonsAndTrollsApi->dungeons_and_trolls_yell:\n")
         pprint(api_response)
     except Exception as e:
@@ -865,7 +878,8 @@ with dungeons_and_trolls_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DungeonsandtrollsMessage**](DungeonsandtrollsMessage.md)|  | 
+ **message** | [**DungeonsandtrollsMessage**](DungeonsandtrollsMessage.md)|  | 
+ **blocking** | **bool**| default true | [optional] 
 
 ### Return type
 
